@@ -50,6 +50,15 @@ public class Main {
                 .sum();                         
                 
         System.out.println("ATV5: R$ " + valorTotal); 
+
+        //ATV6
+        List<String> linguagens = Arrays.asList("Java", "Python", "C", "JavaScript", "Ruby");
+        
+        List<String> linguagensOrdenadas = linguagens.stream()
+                .sorted(java.util.Comparator.comparing(String::length)) 
+                .collect(Collectors.toList());                         
+                
+        System.out.println("ATV6: " + linguagensOrdenadas);
     }
 }
 
